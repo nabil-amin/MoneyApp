@@ -2,7 +2,7 @@ export type Transaction = {
   id: string;
   type: "DEPOSIT" | "INVEST";
   amount: number;
-  date: string; // ISO
+  date: string;
   description?: string;
 };
 
@@ -15,7 +15,7 @@ export type Opportunity = {
   id: string;
   name: string;
   description: string;
-  expectedReturn: number; // percent
+  expectedReturn: number;
   durationMonths: number;
   minAmount: number;
 };

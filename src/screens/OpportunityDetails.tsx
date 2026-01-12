@@ -9,7 +9,6 @@ import type { StackNavigationProp } from "@react-navigation/stack";
 type RootStackParamList = {
   OpportunityDetails: { opportunityId: string };
   Wallet: undefined;
-  // add other routes here if needed
 };
 
 function formatCurrency(n: number) {
@@ -58,7 +57,6 @@ export default function OpportunityDetails({ route }: { route: any }) {
         title: "Success",
         message: "Investment successful",
       });
-      // navigation.navigate("Wallet");
     } catch (err: any) {
       setAlert({
         visible: true,
