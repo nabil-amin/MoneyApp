@@ -23,24 +23,7 @@ export const WalletProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [balances, setBalances] = useState<WalletBalances | null>(null);
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-  const [opportunities, setOpportunities] = useState([
-    {
-      id: "1",
-      name: "Solar Energy Investment",
-      description: "Invest in renewable energy and earn returns.",
-      expectedReturn: 8,
-      durationMonths: 12,
-      minAmount: 1000,
-    },
-    {
-      id: "2",
-      name: "Startup Loan",
-      description: "Support a new business and share profits.",
-      expectedReturn: 12,
-      durationMonths: 24,
-      minAmount: 2000,
-    },
-  ]);
+  const [opportunities, setOpportunities] = useState<Opportunity[]>([]);
   const [loading, setLoading] = useState(true);
 
   async function loadAll() {
